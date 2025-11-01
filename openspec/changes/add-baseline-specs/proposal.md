@@ -2,30 +2,32 @@
 
 ## Why
 
-既存のTODOアプリケーションにはDESIGN.mdが存在するが、OpenSpec形式の仕様書が存在しない。今後の変更管理を効率化し、AIアシスタントが仕様を理解して開発を支援できるようにするため、既存機能の仕様をOpenSpec形式で作成する必要がある。
+既存のTODOアプリケーションにはDESIGN.mdはあるものの、OpenSpec形式の仕様書が存在しません。今後の変更管理を効率化し、AIアシスタントが仕様を参照しながら開発を支援できるようにするため、既存機能の仕様をOpenSpec形式で整理する必要があります。
 
 ## What Changes
 
-- **user-auth** capability の仕様を作成
-  - ユーザー登録機能
-  - ログイン機能
-  - JWT認証機能
+- **user-auth** capability の仕様を新規作成
+  - ユーザー登録
+  - ログイン
+  - JWT認証
   - パスワードセキュリティ
+  - 認証済みユーザー情報取得
 
-- **todo-management** capability の仕様を作成
-  - TODO作成機能
-  - TODO一覧取得機能
-  - TODO更新機能
-  - TODO削除機能
+- **todo-management** capability の仕様を新規作成
+  - TODO作成
+  - TODO一覧取得
+  - TODO更新
+  - TODO削除
   - 完了ステータス管理
+  - ユーザーデータ分離
 
-- 既存のDESIGN.mdとREADME.mdの内容をOpenSpec形式の要件とシナリオに変換
+- 既存の DESIGN.md と README.md の内容を OpenSpec の要件・シナリオ表現へ反映
 
 ## Impact
 
-- Affected specs: `user-auth`, `todo-management` (新規作成)
-- Affected code: なし（既存実装の仕様化のみ、コード変更なし）
-- Benefits:
-  - 今後の機能追加時に既存仕様との整合性を確認可能
-  - AIアシスタントが仕様を参照して正確な実装を支援可能
-  - 変更提案時に影響範囲を明確化可能
+- 対象仕様: `user-auth`, `todo-management`（新規作成）
+- コード影響: なし（既存機能の仕様化のみでコード変更は行わない）
+- 期待効果:
+  - 既存機能の仕様と将来の変更内容を照合しやすくなる
+  - AIアシスタントが仕様を参照して正確に実装支援できるようになる
+  - 変更提案時に影響範囲を明示できる
